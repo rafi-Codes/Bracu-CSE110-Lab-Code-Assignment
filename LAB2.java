@@ -25,7 +25,6 @@ public class task1 {
     }
 }
 
-
 // Task 02
 import java.util.Scanner;
 
