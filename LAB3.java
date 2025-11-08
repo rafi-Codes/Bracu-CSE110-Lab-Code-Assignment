@@ -84,7 +84,7 @@ public class task4 {
         while (num > 0){
             System.out.print(num % 10);
             num /= 10;
-            if (num > 0) System.out.print(", ");
+            if (num > 0) System.out.print(",");
         }
 
         sc.close();
@@ -96,7 +96,7 @@ import java.util.Scanner;
 public class task5 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the 5-digit vault code: ");
+        System.out.print("Enter the N-digit vault code: ");
         int num = sc.nextInt();
         int op = num;
         int digit = 0;
@@ -129,6 +129,15 @@ public class task6 {
         int num = sc.nextInt();
         boolean isNotPrime = false;
         int sum = 1;
+
+						
+						if (num <= 1) {
+            System.out.println(num + " is not a prime number");
+            System.out.println(num + " is not a perfect number");
+            sc.close();
+            return;
+        }
+
         for (int i = 2; i < num; i++){
             if (num % i == 0){
                 if (!isNotPrime){
