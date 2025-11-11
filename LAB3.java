@@ -131,7 +131,7 @@ public class task6 {
         int sum = 1;
 
 						
-	    if (num <= 1) {
+	      if (num <= 1) {
             System.out.println(num + " is not a prime number");
             System.out.println(num + " is not a perfect number");
             sc.close();
