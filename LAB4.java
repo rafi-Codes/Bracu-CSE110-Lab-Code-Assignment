@@ -89,5 +89,49 @@ public class task03 {
 }
 
 // Task 04
+import java.util.Scanner;
+
+public class task04 {
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner (System.in);
+        System.out.print("Number of Members: ");
+        int members = sc.nextInt();
+
+        for (int i = 1; i <= members; i++){
+            System.out.printf("Exercises for Member-%d:",i);
+            int exs = sc.nextInt();
+            if (exs > 3){
+                System.out.println("(Can’t do more than 3 exercise)\n");
+                exs = 3;
+            }
+            int rawSum = 0, totalCal = 0;
+
+            for (int j = 1; j <= exs; j++){
+                System.out.printf("Exercise-%d: ",j);
+                int cal = sc.nextInt();
+                rawSum += cal;
+
+                if (cal > 350){
+                    cal += (cal * 0.50);
+                }
+                totalCal += cal;
+
+            }
+
+            if ((rawSum / 3) < 200){
+                totalCal -= (totalCal * 0.10);
+            }
+
+            else if ((rawSum / 3) > 400){
+                totalCal += 150;
+            }
+
+            System.out.printf("Average calories earned per day for Member-%d: %.3f\n",i,(totalCal / 3.0));
+        }
+
+        sc.close();
+    }
+}
 
 
