@@ -134,4 +134,113 @@ public class task04 {
     }
 }
 
+// Ungraded Task 01
+import java.util.Scanner;
 
+public class ungrade {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("X: ");
+        int X = sc.nextInt();
+        System.out.print("Y: ");
+        int Y = sc.nextInt();
+
+        int sum = 0;
+        while (Y > 0) {
+            for (int i = 2; i * i <= X; i++){
+                if (X % i != 0) {
+                    sum += X;
+                    Y--;
+                }
+            }
+            X++;
+        }
+        
+        System.out.println("Sum: " + sum);
+        sc.close();
+    }
+}
+
+// Ungraded Task 02
+import java.util.Scanner;
+
+public class ungrade {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("X: ");
+        int X = sc.nextInt();
+        System.out.print("Y: ");
+        int Y = sc.nextInt();
+
+        if (X % 2 == 0){
+            X++;
+        }
+
+        int sum = 0;
+        while (Y --> 0) {
+            sum += X;
+            X += 2;
+        }
+
+        System.out.println("Sum: " + sum);
+        sc.close();
+    }
+}
+
+// Ungraded Task 03
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class ungrade {
+    public static boolean [] sieve(){
+        boolean arr[] = new boolean[1000+1];
+        Arrays.fill(arr,true);
+        arr[0] = arr[1] = false;
+        for (int i = 2; i * i <= 1000; i++){
+            if (arr[i]){
+                for(int j = i * i; j <= 1000; j += i){
+                    arr[j] = false;
+                }
+            }
+        }
+        return arr;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        boolean arr[] = sieve();
+        int i = 2;
+        while (n > 0){
+            if (arr[i]){
+                System.out.println(i);
+                n--;
+            }
+            i++;
+        }
+        sc.close();
+    }
+}
+
+// Ungraded Task 04
+import java.util.Scanner;
+
+public class codeforces {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int p = sc.nextInt();
+        int cnt = 0;
+        for (int a = 1; a <= p; a++) {
+            for (int b = a + 1; b <= p; b++) {
+                int cSqr = (a * a) + (b * b) ;
+                int c = (int) Math.sqrt(cSqr);
+                if ( (a + b + c) == p && (c * c) == cSqr) {
+                    System.out.printf("%d %d %d\n", a, b, c);
+                    cnt++;
+                }
+            }
+        }
+        System.out.print("Total- " + cnt);
+        sc.close();
+    }
+}
