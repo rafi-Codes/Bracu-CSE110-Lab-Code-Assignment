@@ -244,3 +244,40 @@ public class codeforces {
         sc.close();
     }
 }
+
+// Another way to solve task 2
+import java.util.Scanner;
+public class codeforces {
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner (System.in);
+        System.out.print("Enter number of students to check: ");
+        int student = sc.nextInt();
+
+        while (student --> 0){
+            System.out.print("Enter student ID: ");
+            int id = sc.nextInt();
+            int op = id;
+
+            if (op == 0){
+                System.out.println("Not Lucky");
+                sc.close();
+                return; 
+            }
+
+            while (op > 2){
+                if (op % 2 == 0) op /= 2;
+                else {
+                    System.out.println("Not Lucky");
+                    sc.close();
+                    return;
+                }
+            }
+            
+            System.out.println("Lucky ID");  
+
+        sc.close();
+        }
+    }
+}
+
