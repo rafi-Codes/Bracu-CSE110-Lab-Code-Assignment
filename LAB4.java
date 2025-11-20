@@ -247,7 +247,8 @@ public class codeforces {
 
 // Another way to solve task 2
 import java.util.Scanner;
-public class codeforces {
+
+public class codeforce {
     public static void main(String[] args) {
         
         Scanner sc = new Scanner (System.in);
@@ -272,10 +273,8 @@ public class codeforces {
                 }
             }
             
-            System.out.println("Lucky ID");  
-
-        sc.close();
+            System.out.println("Lucky ID");
         }
+        sc.close();
     }
 }
-
