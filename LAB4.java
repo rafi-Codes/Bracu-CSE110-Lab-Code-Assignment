@@ -261,16 +261,14 @@ public class codeforces {
 
             if (op == 0){
                 System.out.println("Not Lucky");
-                sc.close();
-                return; 
+                continue; 
             }
 
             while (op > 2){
                 if (op % 2 == 0) op /= 2;
                 else {
                     System.out.println("Not Lucky");
-                    sc.close();
-                    return;
+                    continue;
                 }
             }
             
