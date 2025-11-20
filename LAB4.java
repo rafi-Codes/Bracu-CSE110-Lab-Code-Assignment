@@ -247,7 +247,6 @@ public class codeforces {
 
 // Another way to solve task 2
 import java.util.Scanner;
-
 public class codeforce {
     public static void main(String[] args) {
         
@@ -264,16 +263,17 @@ public class codeforce {
                 System.out.println("Not Lucky");
                 continue; 
             }
-
+            boolean isPowerOfTwo = true;
             while (op > 2){
                 if (op % 2 == 0) op /= 2;
                 else {
                     System.out.println("Not Lucky");
-                    continue;
+                    isPowerOfTwo = false;
+                    break;
                 }
             }
             
-            System.out.println("Lucky ID");
+            if (isPowerOfTwo) System.out.println("Lucky ID");
         }
         sc.close();
     }
