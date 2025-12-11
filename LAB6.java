@@ -108,7 +108,7 @@ public class codeforces {
         String text = sc.nextLine();
         int len = text.length() - 1;
         int i = 0;
-        while (true){
+        while (i < text.length()){
             if (text.charAt(len--) != ' '){
                 i++;
             } else {
