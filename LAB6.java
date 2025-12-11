@@ -58,3 +58,44 @@ public class task02 {
         sc.close();
     }
 }
+
+// Task 03
+import java.util.Scanner;
+
+public class codeforces {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int max = -1;
+        String temp = "";
+        String maxStr = "";
+        System.out.println("Names of the spells:");
+        do {
+            temp = sc.next();
+            if (max < temp.length()){
+                max = temp.length();
+                maxStr = temp;
+            }
+        } while (!temp.equals("stop"));
+
+        int power = 0;
+        temp = "";
+        for (int i = 0; i < maxStr.length(); i++){
+            char ch = maxStr.charAt(i);
+            if (ch >= 'a' && ch <= 'z'){
+                ch -= 32;
+                temp += ch;
+                power += (ch);
+            } 
+            else if (ch >= 'A' && ch <= 'Z') {
+                temp += ch;
+                power += ch;
+            }
+        }
+        System.out.println("Largest Spell : " + temp);
+        System.out.println("Power Level : " + power);
+        sc.close();
+    }
+}
+
+// Task 04
+
