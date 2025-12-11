@@ -25,3 +25,36 @@ public class task01 {
     }
 }
 
+// Task 02
+import java.util.Scanner;
+
+public class task02 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String text = sc.nextLine();
+        String vowel = "";
+        for (int i = 0; i < text.length(); i++){
+            char ch = text.charAt(i);
+            if (ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'O' || ch == 'U' 
+                || ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u'){
+
+                vowel += ch;
+            }
+        }
+        int len = vowel.length() - 1;
+        String ans = "";
+        for (int i = 0; i < text.length(); i++){
+            char ch = text.charAt(i);
+            if (ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'O' || ch == 'U' 
+                || ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u'){
+
+                ans += vowel.charAt(len--);
+            }
+            else {
+                ans += text.charAt(i);
+            }
+        }
+        System.out.print(ans);
+        sc.close();
+    }
+}
