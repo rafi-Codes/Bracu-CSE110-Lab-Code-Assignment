@@ -99,3 +99,23 @@ public class codeforces {
 
 // Task 04
 
+// Task 05
+import java.util.Scanner;
+
+public class codeforces {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String text = sc.nextLine();
+        int len = text.length() - 1;
+        int i = 0;
+        while (true){
+            if (text.charAt(len--) != ' '){
+                i++;
+            } else {
+                break;
+            }
+        }
+        System.out.println(i);
+        sc.close();
+    }
+}
