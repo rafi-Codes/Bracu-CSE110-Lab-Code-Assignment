@@ -98,6 +98,70 @@ public class task03 {
 }
 
 // Task 04
+import java.util.Scanner;
+
+public class task04 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Fan Message: ");
+        String text = sc.nextLine();
+
+        int madrid = 0, city = 0;
+        boolean close = false, destroy = false;
+
+        for (int i = 0; i < text.length(); i++){
+            String word = "";
+            while (i < text.length() && text.charAt(i) != ' '){
+
+                if (text.charAt(i) >= 'A' && text.charAt(i) <= 'Z'){
+                    word += (char) ((int) text.charAt(i) + 32);
+                }
+
+                else if (text.charAt(i) >= 'a' && text.charAt(i) <= 'z') {
+                    word += text.charAt(i);
+                }
+
+                i++;
+            }
+
+            if (word.equals("madrid")){
+                madrid++;
+            } 
+            else if (word.equals("city")) {
+                city++;
+            }
+
+
+            if (word.equals("destroy")){
+                destroy = true;
+            } 
+            else if (word.equals("close")){
+                close = true;
+            }
+        }
+
+        if (madrid > city){
+            System.out.println("Madrid Supporter");
+        } else if (city > madrid){
+            System.out.println("City Supporter");
+        } else {
+            System.out.println("Neutral");
+        }
+
+        if (close ^ destroy){
+            if (close){
+                System.out.println("Fan expect a close match");
+            } else {
+                System.out.println("Fan expects a dominating victory!");
+            }
+        } 
+        else {
+            System.out.println("Hard to read the fan sentiment");
+        }
+
+        sc.close();
+    }
+}
 
 // Task 05
 import java.util.Scanner;
