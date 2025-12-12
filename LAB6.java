@@ -183,3 +183,29 @@ public class task05 {
         sc.close();
     }
 }
+
+// Ungraded task 01
+import java.util.Scanner;
+
+public class ungradedTask01 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Message: ");
+        String text1 = sc.next();
+        System.out.print("Key: ");
+        String text2 = sc.next();
+        int i = 0;
+        String ans = "";
+        while (i <  text1.length() || i < text2.length()){
+            if (i < text1.length()){
+                ans += text1.charAt(i);
+            }
+            if (i < text2.length()){
+                ans += text2.charAt(i);
+            }
+            i++;
+        }
+        System.out.println(ans);
+        sc.close();
+    }
+}
