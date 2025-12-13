@@ -345,3 +345,32 @@ public class ungradedTask05 {
         sc.close();
     }
 }
+
+// Ungraded Task 06
+import java.util.Scanner;
+
+public class ungradedTask06 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String text = sc.nextLine();
+        boolean wasUpper = false, wasLower = false;
+        String ans = "";
+        ans += text.charAt(0);
+        for (int i = 1; i < text.length(); i++){
+            char ch = text.charAt(i);
+            if (ans.charAt(i - 1) >= 'A' && ans.charAt(i - 1) <= 'Z'){
+                if (ch >= 'A' && ch <= 'Z') ch = (char) ( (int) ch + 32);
+                ans += ch;
+            } 
+            else if (ans.charAt(i - 1) >= 'a' && ans.charAt(i - 1) <= 'z'){
+                if (ch >= 'a' && ch <= 'z') ch = (char) ( (int) ch - 32);
+                ans += ch;
+            } 
+            else {
+                ans += ch;
+            }
+        }
+        System.out.println(ans);
+        sc.close();
+    }
+}
