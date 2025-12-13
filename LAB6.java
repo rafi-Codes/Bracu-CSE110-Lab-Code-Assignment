@@ -244,3 +244,24 @@ public class ungrdaedTask02 {
         sc.close();
     }
 }
+
+// Ungraded Task 03
+import java.util.Scanner;
+
+public class ungradedTask03 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String text = sc.next();
+        int sum = 0;
+        for (int i = 0; i < text.length() - 1; i++){
+            sum += (int) Math.abs( (int) text.charAt(i) - (int) text.charAt(i + 1));
+        }
+
+        if (sum % 5 == 0){
+            System.out.println("Hurray! The mysterious traveler is going home!!");
+        } else {
+            System.out.println("Oh no!! The mysterious traveler will be stuck on the island!!");
+        }
+        sc.close();
+    }
+}
