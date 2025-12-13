@@ -345,15 +345,52 @@ public class ungradedTask05 {
         sc.close();
     }
 }
-
 // Ungraded Task 06
 import java.util.Scanner;
 
 public class ungradedTask06 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        String text = sc.next();
+        boolean hasUpper = false, hasLower = false, hasSpecial = false, hasNum = false;
+
+        for (int i = 0; i < text.length(); i++){
+            if (text.charAt(i) >= 'A' && text.charAt(i) <= 'Z'){
+                hasUpper = true;
+            } 
+            if (text.charAt(i) >= 'a' && text.charAt(i) <= 'z'){
+                hasLower = true;
+            }
+            else if (text.charAt(i) >= '0' && text.charAt(i) <= '9'){
+                hasNum = true;
+            }
+            else {
+                if (text.charAt(i) != ' '){
+                    hasSpecial = true;
+                }
+            }
+        }
+
+        boolean isStrong = hasUpper && hasLower && hasNum && hasSpecial;
+
+        if (isStrong){
+            System.out.println("True");
+        }
+        else {
+            System.out.println("False");
+        }
+        
+        sc.close();
+    }
+}
+
+// Ungraded Task 07
+import java.util.Scanner;
+
+public class ungradedTask07 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         String text = sc.nextLine();
-        boolean wasUpper = false, wasLower = false;
         String ans = "";
         ans += text.charAt(0);
         for (int i = 1; i < text.length(); i++){
@@ -375,10 +412,10 @@ public class ungradedTask06 {
     }
 }
 
-//Ungraded Task 07
+//Ungraded Task 08
 import java.util.Scanner;
 
-public class ungradedTask07 {
+public class ungradedTask08 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String text = sc.nextLine();
