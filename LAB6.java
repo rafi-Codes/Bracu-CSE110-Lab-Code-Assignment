@@ -209,3 +209,38 @@ public class ungradedTask01 {
         sc.close();
     }
 }
+
+// Ungraded Task 02
+import java.util.Scanner;
+
+public class ungrdaedTask02 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String text = sc.next();
+
+        for (int i = 0; i < text.length(); i++){
+            
+            char ch = '\0';
+            int lim = 0;
+            while (i < text.length() && text.charAt(i) != ']'){
+
+                if (text.charAt(i) != '[') {
+
+                   if (text.charAt(i) >= '0' && text.charAt(i) <= '9'){
+                        lim = lim * 10 + ( (int) text.charAt(i) - 48);
+                    } 
+                    else {
+                        ch = text.charAt(i);
+                    }
+                }
+
+                i++;
+            }
+
+            for (int m = 0; m < lim; m++){
+               System.out.print(ch); 
+            }    
+        }
+        sc.close();
+    }
+}
