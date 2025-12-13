@@ -374,3 +374,25 @@ public class ungradedTask06 {
         sc.close();
     }
 }
+
+//Ungraded Task 07
+import java.util.Scanner;
+
+public class ungradedTask07 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String text = sc.nextLine();
+        String ans = "";
+        for (int i = text.length() - 1; i >= 0; i--){
+            String word = "";
+            while (i >= 0 && text.charAt(i) != ' '){
+                word = text.charAt(i) + word;
+                i--;
+            }
+            ans += (word +  ' ');
+        }
+        System.out.print(ans);
+        sc.close();
+    }
+}
+
