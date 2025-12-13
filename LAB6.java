@@ -309,3 +309,39 @@ public class ungrdaedTask04 {
         sc.close();
     }
 }
+
+// Ungraded Task 05
+import java.util.Scanner;
+
+public class ungradedTask05 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String text = sc.next();
+
+        for (int i = 0; i < text.length(); i++){
+            if (text.charAt(i) == '+'){
+                System.out.print(text.charAt(i - 1));
+            } 
+            else if (text.charAt(i) == '-'){
+                System.out.print(' ');
+            }
+            else if (text.charAt(i) == '#'){
+                System.out.println();
+            }
+            else if (text.charAt(i) == '%'){
+                int k = 3;
+                while (k --> 0){
+                    System.out.print(text.charAt(i));
+                }
+            }
+            else if (text.charAt(i) == '.'){
+                break;
+            }
+            else {
+                System.out.print(text.charAt(i));
+            }
+
+        }
+        sc.close();
+    }
+}
