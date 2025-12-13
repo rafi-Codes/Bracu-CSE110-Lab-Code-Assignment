@@ -265,3 +265,47 @@ public class ungradedTask03 {
         sc.close();
     }
 }
+
+// Ungraded Task 04
+import java.util.Scanner;
+
+public class ungrdaedTask04 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int HEALTH = 100;
+        int SPELLS = 5;
+        while (SPELLS --> 0){
+            String text = sc.next();
+
+            if (text.length() < 3){
+                HEALTH += 10;
+            } else {
+                int spellPower = 0;
+                for (int i = 0; i < text.length(); i++){
+                    spellPower += (int) text.charAt(i);
+                }
+                if (spellPower % 2 == 0) {
+                    HEALTH += 25;
+                } else {
+                    HEALTH -= 50;
+                }
+
+                if (spellPower % 3 == 0) {
+                    HEALTH += 10;
+                }
+            }
+
+            if (HEALTH > 200) {
+                HEALTH = 200;
+            }
+            
+        }
+
+        if (HEALTH > 0){
+            System.out.print("You Lost");
+        } else {
+            System.out.print("You won");
+        }
+        sc.close();
+    }
+}
