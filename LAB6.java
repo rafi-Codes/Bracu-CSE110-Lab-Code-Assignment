@@ -171,6 +171,11 @@ public class task05 {
         Scanner sc = new Scanner(System.in);
         String text = sc.nextLine();
         int len = text.length() - 1;
+
+        while (text.charAt(len) == ' ') {
+            len--;
+        }
+
         int i = 0;
         while (i < text.length()){
             if (text.charAt(len--) != ' '){
