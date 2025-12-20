@@ -23,7 +23,7 @@ public class task01 {
             else if (arr[i] < 0) arr[i] = 0;
         }
 
-        System.out.println("Original array: ");
+        System.out.println("After modifying: ");
         for (int i = 0; i < arr.length; i++){
             System.out.print(arr[i] + " ");
         }
@@ -94,3 +94,80 @@ public class task03 {
 }
 
 // Task 04
+import java.util.Scanner;
+
+public class task04 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Please enter the length of the array 1: ");
+        int n = sc.nextInt();
+        int [] arr1 = new int[n];
+
+        System.out.println("Please enter the elements of the arr1: ");
+        for (int i = 0; i < arr1.length; i++){
+            arr1[i] = sc.nextInt();
+        }
+
+        System.out.print("Please enter the length of the array 2: ");
+        n = sc.nextInt();
+        int [] arr2 = new int[n];
+
+        System.out.println("Please enter the elements of the arr2: ");
+        for (int i = 0; i < arr2.length; i++){
+            arr2[i] = sc.nextInt();
+        }
+
+        for (int i = 0; i < arr2.length; i++){
+            for (int j = 0; j < arr1.length; j++){
+                if (arr1[j] == arr2[i]){
+                    n--;
+                    break;
+                }
+            }
+            
+        }
+        if (n == 0){
+            System.out.println("Array 2 is a subset of Array 1.");
+        } else {
+            System.out.println("Array 2 is not a subset of Array 1.");
+        }
+        sc.close();
+    }
+}
+
+// Task 05
+import java.util.Arrays;
+public class codeforces {
+    public static void main(String[] args) {
+
+        int [] marks = {85, 90, 75, 44, 99};
+        String [] names = {"Bob", "Alice", "Max", "Marry", "Rosy"};
+
+        for (int i = 0; i < marks.length - 1; i++){
+            for (int j = 0; j < marks.length - i - 1; j++){
+                if (marks[j] > marks[j + 1]){
+
+                    int temp = marks[j];
+                    String tempStr = names[j];
+
+                    marks[j] = marks[j + 1];
+                    names[j] = names[j + 1];
+
+                    marks[j + 1] = temp;
+                    names[j + 1] = tempStr;
+
+                }
+            }
+            
+        }
+        
+        System.out.println("Sorted Array: ");
+        for (int i = 0; i < marks.length; i++){
+            System.out.print(marks[i] + " ");
+        }
+        System.out.println();
+        for (int i = 0; i < names.length; i++){
+            System.out.print(names[i] + " ");
+        }
+    }
+}        
