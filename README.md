@@ -1,7 +1,7 @@
 # BRACU CSE110 Lab Assignments – Fall 2025
 
 Welcome to my repository! 🎓  
-This repo contains solutions to the **CSE110: Introduction to Programming** lab assignments and home tasks from **Fall 2025 semester at BRAC University**.  
+This repo contains solutions to the **CSE110: PROGRAMMING LANGUAGE I** lab assignments and home tasks from **Fall 2025 semester at BRAC University**.  
 
 The goal of this repository is to:
 - 📘 Provide organized solutions for each lab (home) task.  
