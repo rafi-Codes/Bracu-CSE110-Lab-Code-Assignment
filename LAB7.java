@@ -137,7 +137,7 @@ public class task04 {
 
 // Task 05
 import java.util.Arrays;
-public class codeforces {
+public class task05 {
     public static void main(String[] args) {
 
         int [] marks = {85, 90, 75, 44, 99};
