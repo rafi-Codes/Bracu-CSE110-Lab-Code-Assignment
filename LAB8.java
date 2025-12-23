@@ -42,3 +42,45 @@ public class task01 {
         sc.close();
     }
 }
+
+// Task 02
+import java.util.Scanner;
+
+public class task02 {
+    public static void show_palindrome(int n){
+        for (int i = 1; i <= n; i++){
+            System.out.print(i);
+        }
+        for (int i = n - 1; i >= 1; i--){
+             System.out.print(i);
+        }
+    }
+
+    public static void showDots (int n){
+        for (int i = 1; i <= n; i++){
+            System.out.print(".");
+        }
+    }
+
+    public static void showDiamond (int range){
+        for (int i = 1; i <= range; i++){
+            showDots(range - i);
+            show_palindrome(i);
+            showDots(range - i);
+            System.out.println();
+        }
+        for (int i = range - 1; i >= 1; i--){
+            showDots(range - i);
+            show_palindrome(i);
+            showDots(range - i);
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        int n = sc.nextInt();
+        showDiamond(n);
+        sc.close();
+    }
+}
