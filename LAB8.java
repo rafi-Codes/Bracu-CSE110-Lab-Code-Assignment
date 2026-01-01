@@ -84,3 +84,32 @@ public class task02 {
         sc.close();
     }
 }
+
+// Task 03
+import java.util.Scanner;
+
+public class task03 {
+    public static double calcTax (int age, int salary) {
+        int tax = 0;
+        if (age < 18 || salary < 10000) return 0.0;
+        else if (salary >= 10000 && salary <= 20000) return salary * 0.07f;
+        else return salary * 0.14f;
+    }
+
+    public static void calcYearlyTax () {
+        Scanner sc = new Scanner(System.in);
+        int age = sc.nextInt();
+        double totalTax = 0.0;
+        for (int i = 1; i <= 12; i++){
+            int salary = sc.nextInt();
+            double tax =  calcTax(age,salary);
+            totalTax += tax;
+            System.out.println("Month"+i+" tax : "+ (tax == 0.0 ? "0" : tax));
+        }
+        System.out.println("Total Yearly Tax: " + totalTax);
+        sc.close();
+    }
+    public static void main(String[] args) {
+        calcYearlyTax();
+    }
+}
